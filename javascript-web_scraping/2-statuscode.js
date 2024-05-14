@@ -6,8 +6,8 @@ const request = require('request');
 const url = process.argv[2];
 
 // Makes an HTTP request to the specified URL
-request(url, function (error, response, body) {
-	if (error) {
+request(url, (error, response) => {
+	if(error) {
 		// If an error occurs, displays an error message
 		console.error('error:', error);
 	} else {
