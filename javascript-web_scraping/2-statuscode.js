@@ -7,7 +7,7 @@ const url = process.argv[2];
 
 // Makes an HTTP request to the specified URL
 request(url, (error, response) => {
-	if(error) {
+	if (error) {
 		// If an error occurs, displays an error message
 		console.error(error);
 	} else {
