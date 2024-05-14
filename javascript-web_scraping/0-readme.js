@@ -5,9 +5,9 @@ const fs = require('fs');
 
 // Checks whether the user has supplied a file path as an argument
 if (process.argv.length !== 3) {
-    // If not, displays an error message and terminates execution
-    console.error('Usage: node read_file.js <file_path>');
-    process.exit(1);
+  // If not, displays an error message and terminates execution
+  console.error('Usage: node read_file.js <file_path>');
+  process.exit(1);
 }
 
 // Retrieves file path from command line arguments
