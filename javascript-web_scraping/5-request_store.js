@@ -1,4 +1,4 @@
-#!/usr/bin / node
+#!/usr/bin/node
 
 const request = require('request');
 const fs = require('fs');
@@ -12,10 +12,10 @@ request(url, (error, response, body) => {
 		console.error(`Error: ${error}`);
 	} else {
 		// Write the response body to the file
-		fs.writeFile(filePath, body, 'utf-8', (err) => {
+		fs.writeFile(filePath, body, 'utf-8', (error) => {
 			// Handle error
-			if (err) {
-				console.error(`Error: ${err}`);
+			if (error) {
+				console.error(`Error: ${error}`);
 			}
 		});
 	}
