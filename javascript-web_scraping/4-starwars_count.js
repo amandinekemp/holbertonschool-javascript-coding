@@ -18,7 +18,7 @@ request(url, function (error, response, body) {
 			// Iterate over each character in the film
 			film.characters.forEach(character => {
 				// Check if the character URL includes '/18/'
-				if (character.includes('/18/')) {
+				if (character.includes('18')) {
 					count++;
 				}
 			});
