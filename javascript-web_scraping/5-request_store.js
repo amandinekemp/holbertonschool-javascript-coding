@@ -12,7 +12,7 @@ request(url, function (error, response, body) {
 		console.error(error);
 	} else {
 		// Write the response body to the file
-		fs.writeFile(filePath, body, 'utf8', (err) => {
+		fs.writeFile(filePath, body, 'utf8', function (err) {
 			// Handle error
 			if (err) {
 				console.error(err);
