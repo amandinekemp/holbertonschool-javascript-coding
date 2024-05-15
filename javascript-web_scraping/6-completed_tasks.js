@@ -1,24 +1,24 @@
 #!/usr/bin/node
 
 const request = require('request');
-const url = process.argv[2];
+const apiUrl = process.argv[2];
 
-request(url, (error, response, body) => {
+request(apiUrl, (error, response, body) => {
 	if (error) {
 		console.error(`Error: ${error}`);
 	} else {
-		const tasks = JSON.parse(body);
-		const completedTasks = {};
+		const todoTasks = JSON.parse(body);
+		const completedTasksByUser = {};
 
-		tasks.forEach((tasks) => {
-			if (task.completed) {
-				if (completedTasks[task.userId]) {
-					completedTasks[task.userId]++;
+		todoTasks.forEach((todoTasks) => {
+			if (todoTasks.completed) {
+				if (completedTasksByUser[todoTasks.userId]) {
+					completedTasksByUser[todoTasks.userId]++;
 				} else {
-					completedTasks[task.userId] = 1;
+					completedTasksByUser[todoTasks.userId] = 1;
 				}
 			}
 		});
-		console.log(completedTasks);
+		console.log(completedTasksByUser);
 	}
 });
