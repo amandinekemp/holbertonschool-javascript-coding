@@ -1,36 +1,35 @@
-// Import express module
+// Importe express et la fonction countStudents
 const express = require('express');
-// Import countStudents function from 3-read_file_async.js
 const countStudents = require('./3-read_file_async');
 
-// Get the database file name from command line arguments
-const database = process.argv[2];
-
-// Create a new instance of express application
+// Crée une nouvelle instance d'application express
 const app = express();
 
-// Define a route for the GET request on the path '/'
+// Route pour la requête GET sur le chemin '/'
 app.get('/', (req, res) => {
-  // Send the response 'Hello Holberton School!'
+  // Envoie une réponse 'Hello Holberton School!' en texte brut
+  res.setHeader('Content-Type', 'text/plain');
   res.send('Hello Holberton School!');
 });
 
-// Define a route for the GET request on the path '/students'
-app.get('/students', (req, res) => {
-  // Call the countStudents function with the database file name
-  countStudents(database)
-    .then((data) => {
-      // Send the response with the list of students
-      res.send(`This is the list of our students\n${data}`);
-    })
-    .catch((error) => {
-      // Send a 500 Internal Server Error response with the error message
-      res.status(500).send(error.message);
-    });
+// Route pour la requête GET sur le chemin '/students'
+app.get('/students', async (req, res) => {
+  // Envoie une réponse en texte brut
+  res.setHeader('Content-Type', 'text/plain');
+  res.write('This is the list of our students\n');
+  try {
+    // Récupère la liste des étudiants à partir de la base de données
+    const data = await countStudents(process.argv[2]);
+    // Envoie la liste des étudiants
+    res.end(`${data.join('\n')}`);
+  } catch (error) {
+    // Envoie un message d'erreur
+    res.end(error.message);
+  }
 });
 
-// Start the server and listen on port 1245
+// Démarre le serveur et écoute sur le port 1245
 app.listen(1245);
 
-// Export the express application so it can be used in other files
+// Exporte l'application express pour qu'elle puisse être utilisée dans d'autres fichiers
 module.exports = app;
