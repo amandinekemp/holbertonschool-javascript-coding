@@ -22,7 +22,21 @@
 
 ## ➤ Description:
 
+To run JavaScript code using Node.js, you first need to install Node.js on your computer. Then you can create a JavaScript file and execute it using the `node` command in your terminal.
 
+To use Node.js modules, you must first install them using npm (the Node.js package manager). Then you can import them into your JavaScript file using the `require` command.
+
+To read files using a specific Node.js module, you can use the `fs` (file system) module. This module provides methods for reading, writing and managing files on your computer.
+
+To access command-line arguments and the environment using `process`, you can use the `process.argv` and `process.env` properties. The `process.argv` property contains an array of command line arguments, and the `process.env` property contains an object of environment variables.
+
+To create a small HTTP server using Node.js, you can use the `http` module. This module provides methods for creating and managing an HTTP server. You can also use the Express.js framework to create an HTTP server more easily.
+
+To create advanced routes with Express.js, you can use get, post, put, delete, etc. methods to handle different types of HTTP requests. You can also use route parameters and middleware to manage requests more flexibly.
+
+To use ES6 with Node.js using Babel, you first need to install Babel and the necessary plugins. Then you can use the babel-node command to execute your ES6 JavaScript file.
+
+To use Nodemon for faster development, you first need to install it using npm. Then you can use the nodemon command to run your JavaScript file. Nodemon will automatically restart your server each time you save changes, saving you time and headaches.
 
 ----------
 
