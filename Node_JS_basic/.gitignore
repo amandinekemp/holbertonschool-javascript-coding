@@ -87,3 +87,8 @@ node_modules/
 
 #package-lock.json
 package-lock.json
+
+
+*main.js
+*0.js
+*1.js
