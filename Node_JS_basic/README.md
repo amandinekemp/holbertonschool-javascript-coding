@@ -229,7 +229,7 @@ bob@dylan:~$
 ```
 
 Repo:
-
+J'ai fini le projet, j'ai envoyé le lien pour la corection à un mec de BDX 
 * GitHub repository: holbertonschool-javascript-coding
 * Directory: Node_JS_basic
 * File: 0-console.js
@@ -584,9 +584,9 @@ If you are starting node from outside of the folder full_server, you will have t
 
 In terminal 1:
 
-````
-bob@dylan:~$ npm run dev
-...
+```bob@dylan:~$ npm run dev
+```
+
 ```
 
 In terminal 2:
