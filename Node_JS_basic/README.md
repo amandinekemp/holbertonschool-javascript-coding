@@ -449,7 +449,7 @@ Install Express and in a file named 6-http_express.js, create a small HTTP serve
 
 In terminal 1:
 
-$```
+```
 bob@dylan:~$ node 6-http_express.js
 ...
 ```
@@ -584,9 +584,9 @@ If you are starting node from outside of the folder full_server, you will have t
 
 In terminal 1:
 
-```bob@dylan:~$ npm run dev
 ```
-
+bob@dylan:~$ npm run dev
+...
 ```
 
 In terminal 2:
