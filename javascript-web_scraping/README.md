@@ -1,5 +1,5 @@
 <p align="center">
-    <img [JavaScript - Web scraping] src="">
+    <img [JavaScript - Web scraping] src="https://hasdata.com/assets/cache_image/components/images/blog/web-scraping.a16f3e1b.webp">
 </p>
 
 ----------
